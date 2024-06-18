@@ -27,29 +27,29 @@
     <div id="main-registro_estudiante" class="main">
         <h1>REGISTRARSE</h1>
             <form action="registro_es.jsp" method="post">
-            	<div>
-	            	<div >
+            	<div class="rellenado" >
+	            	<div class="data_ps">
 	                    <label for="fname">Nombre:</label>
-	                    <input type="text" id="first_name" name="fname" required><br/><br/>
+	                    <input type="text" id="first_name" name="fname" class="input_r" required><br/><br/>
 	    
 	                    <label for="lname">Apellido:</label>
-	                    <input type="text" id="last_name" name="lname" required>
+	                    <input type="text" id="last_name" name="lname" class="input_r" required>
 	                </div>
 	    
-	                <div>
+	                <div class="data_ps">
 	                    <label for="cedula">Cedula:</label>
-	                    <input type="text" id="cedula" name="cedula" required><br/><br/>
+	                    <input type="text" id="cedula" name="cedula" class="input_r" required><br/><br/>
 	                    
 	                    <label for="indice">Indice:</label>
-	                    <input type="text" id="indice" name="indice" required><br/><br/>
+	                    <input type="text" id="indice" name="indice" class="input_r" required><br/><br/>
 	                </div>
 	                
-	                <div>
+	                <div class="data_ps">
 	                	<label for="election_year_tmp">Seleccione su año lectivo:</label>
 	                	<input type="date" value="2024-03-01" min="2024-03-01" max="2030-03.01" id="election_year_tmp" name="election_year_tmp" required>
 	                </div>
 	
-	                <div >
+	                <div class="data_ps">
 	                    <h3>Centro regional:</h3>
 	                    <select name="centro_rg_es" required>
 	                        <option value="Panama">Panamá</option>
@@ -62,21 +62,25 @@
 	                    </select>
 	                </div>
 	                
-	                <div>
+	                <div class="exp_virtual">
+						<div class="exp_virt_1" style="padding-right: 30px;">
+							<h3>Cursos </h3>
+						</div>
 	                	
-	                	<h3>Cursos </h3>
+	                	<div class="exp_virt_2">
+							<label for=soldadura style="padding-left: 200px; padding-right: 0px;">Soldadura</label>
+							<input type="checkbox" id="soldadura" name="soldadura" value="soldadura">
+							
+							<label for=electronica style="padding-left: 200px; padding-right: 0px;">Electrónica</label>
+							<input type="checkbox" id="electronica" name="electronica" value="electronica">
+							
+							<label for=cocina style="padding-left: 200px; padding-right: 0px;">Cocina</label>
+							<input type="checkbox" id="cocina" name="cocina" value="cocina">
+							
+							<label for=programacion style="padding-left: 200px; padding-right: 0px;">Programación</label>
+							<input type="checkbox" id="programacion" name="programacion" value="programacion">
+						</div>
 	                	
-	                	<label for=soldadura>Soldadura</label>
-	                	<input type="checkbox" id="soldadura" name="soldadura" value="soldadura">
-	                	
-	                	<label for=electronica>Electrónica</label>
-	                	<input type="checkbox" id="electronica" name="electronica" value="electronica">
-	                	
-	                	<label for=cocina>Cocina</label>
-	                	<input type="checkbox" id="cocina" name="cocina" value="cocina">
-	                	
-	                	<label for=programacion>Programación</label>
-	                	<input type="checkbox" id="programacion" name="programacion" value="programacion">
 	                
 	                </div>
 	                
