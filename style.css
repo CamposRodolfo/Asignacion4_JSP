@@ -1,0 +1,518 @@
+/* Importa la fuente 'Montserrat' desde Google Fonts con distintos pesos y estilos */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap');
+
+
+/* General */
+* {
+    margin: 0; /* Establece el margen exterior en 0 */
+    padding: 0; /* Establece el relleno interior en 0 */
+    box-sizing: border-box; /* Hace que el tamaño total de un elemento sea su ancho y alto incluyendo el relleno y el borde, pero no el margen */
+    list-style: none; /* Elimina el marcador de lista */
+}
+
+body {
+    font-family: "Montserrat", sans-serif; /* Usa la fuente Montserrat o, si no está disponible, una fuente sans-serif */
+    font-size: 1.2rem; /* Establece el tamaño de fuente base en 1.2 rem */
+    min-height: 100vh; /* Establece la altura mínima del cuerpo como el 100% del viewport */
+    background-color: rgba(3,37,57,1); /* Establece el color de fondo del cuerpo */
+}
+
+/* Estilos para elementos hijos directos de '.body' */
+.body > *{
+    box-shadow: 10px 6px 37px -13px rgba(51,51,51,0.74); /* Establece una sombra en los elementos */
+    border-radius: 10px; /* Establece un radio de borde de 10px */
+    padding: 10px; /* Establece un relleno interno de 10px */
+    text-align: center; /* Centra el texto */
+    font-weight: 500; /* Establece el grosor de la fuente */
+}
+
+.header, .aside{
+    font-weight: 500; /* Grosor del texto */
+    font-size: 1.25rem; /* Tamaño del texto */
+    color: #edf0f1; /* Color del texto */
+    
+    /* Estilos para elementos de lista, enlaces y botones dentro del encabezado */
+    li, a, button {
+        font-weight: 500; /* Grosor del texto */
+        font-size: 1.25rem; /* Tamaño del texto */
+        color: #edf0f1; /* Color del texto */
+        text-decoration: none; /* Elimina la decoración del texto */
+    }
+
+    button {
+        /* Establece el estilo del botón */
+        padding: 9px 25px; /* Establece un relleno interno de 9px arriba y abajo y 25px a los lados */
+        background-color: rgba(250,153,28,1); /* Establece un color de fondo con transparencia */
+        border: none; /* Elimina el borde */
+        border-radius: 50px; /* Establece un radio de borde para que el botón sea redondeado */
+        cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+        transition: all 0.3s ease 0s; /* Establece una transición suave para todas las propiedades que cambien durante 0.3 segundos */
+    }
+
+    /* Estilos para el botón al pasar el mouse sobre él */
+    button:hover {
+        background-color: rgb(228,140,25,1); /* Cambia el color de fondo con transparencia al pasar el mouse */
+    }
+}
+
+
+/* Estilos comunes para '.header', '.news', '.news-sport' y '#contact-send' */
+.header, .aside, .news, .news-sport,  #contact-send {
+    button {
+        /* Establece el estilo del botón */
+        color: #edf0f1; /* Color del texto */
+        font-size: 1rem; /* Tamaño del texto */
+        font-weight: 500; /* Grosor del texto */
+        padding: 9px 25px; /* Establece un relleno interno de 9px arriba y abajo y 25px a los lados */
+        background-color: rgba(250,153,28,1); /* Establece un color de fondo con transparencia */
+        border: none; /* Elimina el borde */
+        border-radius: 50px; /* Establece un radio de borde para que el botón sea redondeado */
+        cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+        transition: all 0.3s ease 0s; /* Establece una transición suave para todas las propiedades que cambien durante 0.3 segundos */
+    }
+
+    /* Estilos para el botón al pasar el mouse sobre él */
+    button:hover {
+        background-color: rgba(228,140,25,1); /* Cambia el color de fondo con transparencia al pasar el mouse */
+    }
+
+}
+
+/* Estilos para el logotipo */
+.logo img {
+    cursor: pointer; /* Establece el cursor como un puntero al pasar sobre el logotipo */
+    background-color: #FFF; /* Establece el color de fondo del logotipo */
+    height: 150px; /* Establece la altura de la imagen del logotipo en 100px */
+    margin: 5px; /* Establece un margen exterior de 10px */
+    padding: 5px; 
+    /* Establece un relleno interno de 10px */
+    border-radius: 8%; /* Establece un radio de borde del 50% para que el logotipo sea circular */
+}
+
+/* Estilos para elementos de lista dentro de la barra de navegación */
+.navbar li {
+    display: inline-block; /* Muestra los elementos en línea */
+    padding: 5px 20px; /* Establece un relleno de 20px a los lados (espaciado interno) */
+
+    a {
+        transition: all 0.3s ease 0s; /* Establece una transición suave para todas las propiedades que cambien durante 0.3 segundos */
+    }
+
+    /* Estilos para el enlace al pasar el mouse sobre él */
+    a:hover {
+        color: rgba(250,153,28,1); /* Cambia el color del texto al pasar el mouse */
+    }
+}
+
+.navbar ul{
+    display: grid; /* Muestra los elementos como una cuadrícula */
+    place-items: center; /* Centra los elementos horizontal y verticalmente */
+    grid-template: 
+    "home" auto /* Establece una fila automática para el enlace de inicio */
+    "sport" auto /* Establece una fila automática para el enlace de deportes */
+    "inter" auto /* Establece una fila automática para el enlace internacional */
+    "source" auto; /* Establece una fila automática para el enlace de fuentes */
+
+    /* Estilos para el enlace de inicio */
+    .home {
+        grid-area: home; /* Asigna el área del enlace de inicio */
+    }
+
+    /* Estilos para el enlace de deportes */
+    .redistro_profesor {
+        grid-area: sport; /* Asigna el área del enlace de deportes */
+    }
+
+    /* Estilos para el enlace internacional */
+    .registro_estudiante {
+        grid-area: inter; /* Asigna el área del enlace internacional */
+    }
+
+    /* Estilos para el enlace de fuentes */
+    .calendario {
+        grid-area: source; /* Asigna el área del enlace de fuentes */
+    }
+
+    /* Estilos para dispositivos con un ancho de pantalla mínimo de 992px */
+    /* @media(min-width: 992px) {
+        grid-template: 
+        "home sport inter source" auto;}  */
+        /* Establece una cuadrícula de cuatro columnas */
+}
+
+.header {
+    display: grid; /* Muestra los elementos como una cuadrícula */
+    place-items: center; /* Centra los elementos horizontal y verticalmente */
+    grid-template: 
+    "logo" auto /* Establece una fila automática para el logotipo */
+    "navbar" auto /* Establece una fila automática para la barra de navegación */
+    "contact" auto; /* Establece una fila automática para el contacto */
+
+    /* Estilos para el logotipo */
+    .logo {
+        grid-area: logo; /* Asigna el área del logotipo */
+    }
+
+    /* Estilos para la barra de navegación */
+    .navbar {
+        grid-area: navbar; /* Asigna el área de la barra de navegación */
+    }
+
+    /* Estilos para el contacto */
+    .contact {
+        grid-area: contact; /* Asigna el área del contacto */
+    }
+    
+    /* Estilos para dispositivos con un ancho de pantalla mínimo de 992px */
+    @media(min-width: 992px) {
+        grid-template: 
+        "logo navbar contact" auto/ /* Establece una cuadrícula de tres columnas */
+        auto 600px 200px; /* Establece el ancho de las columnas */
+        
+        /* Estilos para el logotipo */
+        .logo {
+            margin-right: auto; /* Establece un margen derecho automático */
+        }
+    }
+}
+
+/* Responsive */
+.body {
+    display: grid; /* Muestra los elementos como una cuadrícula */
+    gap: 20px; /* Establece un espacio entre los elementos de 20px */
+    grid-template: 
+    "header" auto /* Establece una fila automática para el encabezado */
+    "aside" auto
+    "main" auto /* Establece una fila automática para el contenido principal */
+    "footer" 300px /* Establece una fila de 300px de alto para el pie de página */
+    ;
+
+    /* Estilos para el encabezado */
+    .header {
+        grid-area: header; /* Asigna el área del encabezado */
+        background-color: rgba(28,118,143,0.74); /* Establece el color de fondo del encabezado */
+    }
+
+    .aside {
+        grid-area: aside; /* Asigna el área del contenido del aside*/
+        background-color: rgba(28,118,143,0.74); /* Establece el color de fondo del contenido principal */
+    }
+
+    /* Estilos para el contenido principal */
+    .main {
+        grid-area: main; /* Asigna el área del contenido principal */
+        background-color: rgba(251,243,242,1); /* Establece el color de fondo del contenido principal */
+    }
+
+    /* Estilos para el pie de página */
+    .footer {
+        grid-area: footer; /* Asigna el área del pie de página */
+        background-color: rgba(28,118,143,0.74); /* Establece el color de fondo del pie de página */
+    }
+
+    /* Estilos para los elementos con id 'main-home' y 'main-inter' */
+    /* #main-home, #main-inter {
+        min-height: 2400px; } */
+        /* Establece la altura mínima en 2400px */
+
+    /* Estilos para dispositivos con un ancho de pantalla mínimo de 768px */
+    @media(min-width: 768px) {
+        grid-template: 
+        "header header" auto
+        "aside main" auto
+        "footer footer" 300px/ /* Establece la plantilla de la cuadrícula para pantallas de 768px o más */
+        200px auto;
+
+        /* #main-home, #main-inter {
+            min-height: 1600px; } */
+            /* Establece la altura mínima en 1600px */
+    }
+
+    /* Estilos para dispositivos con un ancho de pantalla mínimo de 992px */
+    @media(min-width: 992px) {
+        grid-template: 
+        "header header header" auto
+        "aside main main" auto
+        "footer footer footer" 300px/ /* Establece la plantilla de la cuadrícula para pantallas de 992px o más */
+        200px auto;
+
+        /* #main-home, #main-inter {
+            min-height: 800px; } */
+            /* Establece la altura mínima en 800px */
+    }
+}
+
+
+
+/* Estilos para el pie de página */
+.footer {
+    display: flex; /* Muestra los elementos como una fila */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea si no caben en la fila */
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+/* Estilos para los enlaces del pie de página */
+.footer-links {
+    padding: 15px; /* Establece un relleno de 15px */
+    
+    h4 {
+        font-size: 1.25rem; /* Tamaño de fuente */
+        color: #edf0f1; /* Color del texto */
+        margin-bottom: 25px; /* Establece un margen inferior de 25px */
+        font-weight: 500; /* Grosor del texto */
+        border-bottom: 2px solid rgba(250,153,28,1); /* Establece un borde inferior de 2px sólido con un color específico */
+        padding-bottom: 10px; /* Establece un relleno inferior de 10px */
+        display: inline-block; /* Muestra el título en línea */
+    }
+
+    ul li a {
+        font-size: 18px; /* Tamaño de fuente */
+        text-decoration: none; /* Elimina la decoración del texto */
+        color: #cccfcf; /* Color del texto */
+        display: block; /* Muestra los elementos como bloques */
+        margin-bottom: 15px; /* Establece un margen inferior de 15px */
+        transition: all 0.3s ease; /* Establece una transición suave para todas las propiedades que cambien durante 0.3 segundos */
+    }
+
+    /* Estilos para el enlace al pasar el mouse sobre él */
+    ul li a:hover {
+        color: rgba(250,153,28,1); /* Cambia el color del texto al pasar el mouse */
+        padding-left: 6px; /* Añade un relleno izquierdo de 6px al pasar el mouse */
+    }
+}
+
+
+section.imagenes {
+    flex-grow: 1;
+    padding-left: 20px;
+}
+
+.imagenes h3 {
+    text-align: center;
+}
+
+.imagenes-contenedor {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.imagenes-contenedor figure {
+    text-align: center;
+}
+
+.imagenes-contenedor img {
+    width: 400px; /* Ajustar el tamaño de las imágenes */
+    height: auto; /* Ajustar el tamaño de las imágenes */
+}
+
+.calendario-img {
+    width: 200px; /* Ajustar el tamaño de la imagen del calendario */
+    height: 50px; /* Mantener la altura automática para mantener la proporción */
+}
+
+
+main {
+    padding: 20px;
+}
+
+.noticias {
+    margin-top: 20px;
+    text-align: center; /* Alinear el texto al centro */
+}
+
+.noticias h3 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.noticias-list {
+    display: flex;
+    flex-wrap: nowrap; /* Evitar que las noticias se envuelvan */
+    justify-content: space-between; /* Espacio entre las noticias */
+    align-items: flex-start; /* Alinear las noticias hacia arriba */
+}
+
+
+.noticias-list {
+    display: flex;
+    flex-wrap: nowrap; /* Evitar que las noticias se envuelvan */
+    justify-content: flex-start; /* Justificar contenido al inicio (izquierda) */
+    align-items: flex-start; /* Alinear las noticias hacia arriba */
+    overflow-x: auto; /* Permitir desplazamiento horizontal si las noticias no caben */
+    gap: 20px; /* Espacio entre las noticias */
+}
+
+.noticia {
+    flex: 0 0 calc(33.33% - 20px); /* Ajustar el ancho de cada noticia (33.33% para tres noticias en una fila) */
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px; /* Aumentar el padding para más espacio */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Alinear texto a la izquierda */
+    margin-bottom: 20px; /* Espacio entre noticias */
+    flex-shrink: 0; /* Evitar que las noticias se reduzcan más allá de su ancho */
+    max-width: 33.33%; /* Establecer el ancho máximo para evitar superposiciones en pantallas pequeñas */
+}
+
+.noticia h4 {
+    font-size: 18px;
+    color: #4A4A4A;
+    margin-top: 0; /* Eliminar el margen superior */
+}
+
+.noticia p {
+    font-size: 14px;
+    color: #7A7A7A;
+    margin: 10px 0; /* Ajustar el margen */
+}
+
+.noticia a {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #FFE699;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.noticia a:hover {
+    background-color: #FFA500;
+}
+
+@media (max-width: 1200px) {
+    .noticias-list {
+        flex-wrap: wrap; /* Envolver noticias cuando no haya suficiente espacio */
+        justify-content: space-between; /* Espacio entre noticias */
+        gap: 20px; /* Espacio entre las noticias */
+        overflow-x: hidden; /* Ocultar desplazamiento horizontal en pantallas más pequeñas */
+    }
+
+    .noticia {
+        flex-basis: calc(50% - 20px); /* Dos noticias por fila en pantallas más pequeñas */
+        max-width: calc(50% - 20px); /* Ancho máximo para evitar superposiciones */
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .noticia {
+        flex-basis: calc(100% - 20px); /* Una noticia por fila en dispositivos móviles */
+        max-width: calc(100% - 20px); /* Ancho máximo para evitar superposiciones */
+    }
+}
+
+.noticia a:hover {
+    background-color: #FFA500;
+}
+
+
+
+.imagen-profesores figcaption,
+.imagen-calendario figcaption,
+.imagen-estudiantes figcaption {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.imagen-profesores figcaption a,
+.imagen-calendario figcaption a,
+.imagen-estudiantes figcaption a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FFD700;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.imagen-profesores figcaption a:hover,
+.imagen-calendario figcaption a:hover,
+.imagen-estudiantes figcaption a:hover {
+    background-color: #FFA500;
+}
+
+
+.soporte_div {
+    flex: 0 0 calc(33.33% - 20px); /* Ajustar el ancho de cada noticia (33.33% para tres noticias en una fila) */
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px; /* Aumentar el padding para más espacio */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Alinear texto a la izquierda */
+    margin-bottom: 20px; /* Espacio entre noticias */
+    flex-shrink: 0; /* Evitar que las noticias se reduzcan más allá de su ancho */
+    /* max-width: 33.33%; */
+     /* Establecer el ancho máximo para evitar superposiciones en pantallas pequeñas */
+}
+
+.soporte_div h4 {
+    font-size: 18px;
+    color: #4A4A4A;
+    margin-top: 0; /* Eliminar el margen superior */
+}
+
+.soporte_div p {
+    font-size: 14px;
+    color: #7A7A7A;
+    margin: 10px 0; /* Ajustar el margen */
+}
+
+.soporte_div a, #soy_profesor {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #FFE699;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.soporte_div a:hover {
+    background-color: #FFA500;
+}
+
+@media (max-width: 1200px) {
+    .noticias-list {
+        flex-wrap: wrap; /* Envolver noticias cuando no haya suficiente espacio */
+        justify-content: space-between; /* Espacio entre noticias */
+        gap: 20px; /* Espacio entre las noticias */
+        overflow-x: hidden; /* Ocultar desplazamiento horizontal en pantallas más pequeñas */
+    }
+
+    .soporte_div {
+        flex-basis: calc(50% - 20px); /* Dos noticias por fila en pantallas más pequeñas */
+        max-width: calc(50% - 20px); /* Ancho máximo para evitar superposiciones */
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .soporte_div {
+        flex-basis: calc(100% - 20px); /* Una noticia por fila en dispositivos móviles */
+        max-width: calc(100% - 20px); /* Ancho máximo para evitar superposiciones */
+    }
+}
+
+.soporte_div a:hover {
+    background-color: #FFA500;
+}
+
+.soporte_div img {
+    height: 350px;
+}
+
+
+.calendario_div {
+    display: grid;
+
+    table {
+        padding-top: 40px;
+    }   
+}
